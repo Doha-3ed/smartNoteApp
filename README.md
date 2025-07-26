@@ -30,3 +30,4 @@ This is a Node.js + Express + MongoDB project that allows users to:
 - OpenAI API
 
 # smartNoteApp
+# smartNoteApp
