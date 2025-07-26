@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "d8532a95-3529-48d7-8423-038d6daa865e",
+		"name": "smartNote",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39580571"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "sgnup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "doha",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "do7a.moha00@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "doha123",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "doha123",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "female",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "mobileNumber",
+									"value": "01271674343",
+									"type": "text"
+								},
+								{
+									"key": "profilePic",
+									"type": "file",
+									"src": "/C:/Users/doham/Downloads/WhatsApp Image 2025-04-17 at 22.11.36_73fc91c0.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/user/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmEmail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"do7a.moha00@gmail.com\",\r\n    \"code\":\"6452\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/user/confirmEmail",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"confirmEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"do7a.moha00@gmail.com\",\r\n    \"password\":\"doha123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgetPassword",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"do7a.moha00@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/user/forgetPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"forgetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"do7a.moha00@gmail.com\",\r\n    \"code\":\"8176\",\r\n    \"newPassword\":\"doha345\",\r\n    \"cPassword\":\"doha345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/user/resetPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadProfilPic",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRvN2EubW9oYTAwQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4ODRjM2UyMjAxYTY1ZGJmYTU1YjliNyIsImlhdCI6MTc1MzUzMTQyOX0.5n4A1VTdLR5-u8sSy--4bBTFinWmq2fYojvTMXoKkZU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profilePic",
+									"type": "file",
+									"src": "/C:/Users/doham/Downloads/WhatsApp Image 2025-04-17 at 22.11.36_73fc91c0.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/user/uploadProfile?",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"uploadProfile"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logOut",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRvN2EubW9oYTAwQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4ODRjM2UyMjAxYTY1ZGJmYTU1YjliNyIsImlhdCI6MTc1MzUzMTQyOX0.5n4A1VTdLR5-u8sSy--4bBTFinWmq2fYojvTMXoKkZU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profilePic",
+									"type": "file",
+									"src": "/C:/Users/doham/Downloads/WhatsApp Image 2025-04-17 at 22.11.36_73fc91c0.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/user/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "addNote",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRvN2EubW9oYTAwQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4ODRjM2UyMjAxYTY1ZGJmYTU1YjliNyIsImlhdCI6MTc1MzUzMjg5Mn0.7Mz6ejLp8PAPFoJ6NEFuMeR-up10SmsQ6C7g9QsdZko",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"note1\",\r\n    \"content\":\"Node.js is a JavaScript runtime built on Chrome's V8 engine. It allows JavaScript to be run server-side, enabling full-stack development with JS. It's non-blocking, event-driven architecture makes it ideal for scalable network applications.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/notes/createNote",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"notes",
+								"createNote"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteNote",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRvN2EubW9oYTAwQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4ODRjM2UyMjAxYTY1ZGJmYTU1YjliNyIsImlhdCI6MTc1MzUzMjg5Mn0.7Mz6ejLp8PAPFoJ6NEFuMeR-up10SmsQ6C7g9QsdZko",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"note1\",\r\n    \"content\":\"Node.js is a JavaScript runtime built on Chrome's V8 engine. It allows JavaScript to be run server-side, enabling full-stack development with JS. It's non-blocking, event-driven architecture makes it ideal for scalable network applications.\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:4000/notes/6884cb1cbfea31ec0dfbcfb6",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"notes",
+								"6884cb1cbfea31ec0dfbcfb6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "summriesNote",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRvN2EubW9oYTAwQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY4ODRjM2UyMjAxYTY1ZGJmYTU1YjliNyIsImlhdCI6MTc1MzUzMjg5Mn0.7Mz6ejLp8PAPFoJ6NEFuMeR-up10SmsQ6C7g9QsdZko",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"note1\",\r\n    \"content\":\"Node.js is a JavaScript runtime built on Chrome's V8 engine. It allows JavaScript to be run server-side, enabling full-stack development with JS. It's non-blocking, event-driven architecture makes it ideal for scalable network applications.\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:4000/notes/summarizeNote/6884cb1cbfea31ec0dfbcfb6",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"notes",
+								"summarizeNote",
+								"6884cb1cbfea31ec0dfbcfb6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
