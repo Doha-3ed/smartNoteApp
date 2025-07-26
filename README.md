@@ -29,5 +29,5 @@ This is a Node.js + Express + MongoDB project that allows users to:
 - Graphql
 - OpenAI API
 
-# smartNoteApp
-# smartNoteApp
+
+
