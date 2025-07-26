@@ -1,0 +1,3 @@
+node_modules/
+config/.env
+git remote add origin https://github.com/Doha-3ed/smartNoteApp.git
